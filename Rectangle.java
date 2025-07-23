@@ -1,10 +1,9 @@
-package chapter9;
+package chapter11;
 
-public class Rectangle {
+public class Rectangle extends Shape {
 
-    protected double length;
-    protected double width;
-    protected double sides;
+    private double length;
+    private double width;
 
     public double getLength() {
         return length;
@@ -22,21 +21,17 @@ public class Rectangle {
         this.width = width;
     }
 
-    public double getSides() {
-        return sides;
+
+
+    public Rectangle(double length, double width) {
+        setLength(length);
+        setWidth(width);
+
     }
 
-    public void setSides(double sides) {
-        this.sides = sides;
+    @Override
+    double calculateArea() {
+        return length * width;
     }
-
-
-    public double calculatePerimeter(){
-        return (2 * length) + (2 * width);
-    }
-
-    public void print(){
-        System.out.println("I am a rectangle");
-    }
-
 }
+

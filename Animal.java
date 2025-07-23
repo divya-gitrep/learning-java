@@ -1,9 +1,9 @@
-package chapter10;
+package chapter11;
 
-public class Animal {
+public abstract class Animal {
 
-    public void makeSound(){
-        System.out.println("unknown animal sound");
+    abstract void makeSound();
+    public void eat(){
+        System.out.println("eat");
     }
-
 }
